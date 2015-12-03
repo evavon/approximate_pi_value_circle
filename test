@@ -1,0 +1,17 @@
+import random as rd
+import math
+
+
+inside_circle = 0
+outside_circle = 0
+n = 18000
+
+for i in range(0,n):
+    x = rd.random ()
+    y = rd.random ()
+    if math.sqrt(x*x + y*y) <= 1:
+        inside_circle = inside_circle + 1
+    else:
+        outside_circle = outside_circle + 1
+pi_value = 4*inside_circle/n
+print (pi_value*1.00000)
